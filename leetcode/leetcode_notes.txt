@@ -1,2 +1,6 @@
-433. Minimum Genetic Mutation:
+127     HARD    Word Ladder
+    The same as 127. BFS, using queue and unordered_set.
+    Much faster if delete words from the set when they are first found, not when they are iterated
+
+433     MEDIUM  Minimum Genetic Mutation:
     BFS, using queue of strings and checking for every possibility of change in small string of 8 elements.

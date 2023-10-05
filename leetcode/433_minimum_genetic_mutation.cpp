@@ -51,3 +51,16 @@ public:
         return -1;
     }
 };
+
+//std::string startGene = "AACCGGTT";
+//std::string endGene = "AACCGGTA";
+//std::vector<std::string> bank = {"AACCGGTA"};
+//std::cout << Solution().minMutation(startGene, endGene, bank) << std::endl;
+//startGene = "AACCGGTT";
+//endGene = "AAACGGTA";
+//bank = {"AACCGGTA","AACCGCTA","AAACGGTA"};
+//std::cout << Solution().minMutation(startGene, endGene, bank) << std::endl;
+//startGene = "AACCGGTT";
+//endGene = "AAACGGTA";
+//bank = {"AACCGATT","AACCGATA","AAACGATA","AAACGGTA"};
+//std::cout << Solution().minMutation(startGene, endGene, bank) << std::endl;

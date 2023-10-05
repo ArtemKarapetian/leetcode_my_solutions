@@ -1,19 +1,15 @@
 #include <iostream>
 #include <vector>
 #include "helper_things.cpp"
-#include "433_minimum_genetic_mutation.cpp"
+#include "127_word_ladder.cpp"
 
 int main() {
-    std::string startGene = "AACCGGTT";
-    std::string endGene = "AACCGGTA";
-    std::vector<std::string> bank = {"AACCGGTA"};
-    std::cout << Solution().minMutation(startGene, endGene, bank) << std::endl;
-    startGene = "AACCGGTT";
-    endGene = "AAACGGTA";
-    bank = {"AACCGGTA","AACCGCTA","AAACGGTA"};
-    std::cout << Solution().minMutation(startGene, endGene, bank) << std::endl;
-    startGene = "AACCGGTT";
-    endGene = "AAACGGTA";
-    bank = {"AACCGATT","AACCGATA","AAACGATA","AAACGGTA"};
-    std::cout << Solution().minMutation(startGene, endGene, bank) << std::endl;
+    std::string startGene = "hit";
+    std::string endGene = "cog";
+    std::vector<std::string> bank = {"hot","dot","dog","lot","log","cog"};
+    std::cout << Solution().ladderLength(startGene, endGene, bank) << std::endl;
+    startGene = "hit";
+    endGene = "cog";
+    bank = {"hot","dot","dog","lot","log"};
+    std::cout << Solution().ladderLength(startGene, endGene, bank) << std::endl;
 }
