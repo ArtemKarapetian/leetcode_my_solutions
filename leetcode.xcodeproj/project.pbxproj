@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A506AB572ACE66BF00836F17 /* helper_things.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506AB562ACE66BF00836F17 /* helper_things.cpp */; };
+		A506AB5A2ACE6B5200836F17 /* 433_minimum_genetic_mutation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506AB592ACE6B5200836F17 /* 433_minimum_genetic_mutation.cpp */; };
 		A5D90B3D2A7DAC260062122B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D90B3C2A7DAC260062122B /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		A506AB562ACE66BF00836F17 /* helper_things.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = helper_things.cpp; sourceTree = "<group>"; };
+		A506AB582ACE677A00836F17 /* leetcode_notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = leetcode_notes.txt; sourceTree = "<group>"; };
+		A506AB592ACE6B5200836F17 /* 433_minimum_genetic_mutation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 433_minimum_genetic_mutation.cpp; sourceTree = "<group>"; };
 		A5D90B392A7DAC260062122B /* leetcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = leetcode; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D90B3C2A7DAC260062122B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +64,8 @@
 			children = (
 				A5D90B3C2A7DAC260062122B /* main.cpp */,
 				A506AB562ACE66BF00836F17 /* helper_things.cpp */,
+				A506AB582ACE677A00836F17 /* leetcode_notes.txt */,
+				A506AB592ACE6B5200836F17 /* 433_minimum_genetic_mutation.cpp */,
 			);
 			path = leetcode;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A506AB5A2ACE6B5200836F17 /* 433_minimum_genetic_mutation.cpp in Sources */,
 				A506AB572ACE66BF00836F17 /* helper_things.cpp in Sources */,
 				A5D90B3D2A7DAC260062122B /* main.cpp in Sources */,
 			);

@@ -104,61 +104,20 @@ public:
 
 
 // Definition for a Node.
-// class Node {
-//public:
-//    int val;
-//    std::vector<Node*> neighbors;
-//    Node() {
-//        val = 0;
-//        neighbors = std::vector<Node*>();
-//    }
-//    Node(int _val) {
-//        val = _val;
-//        neighbors = std::vector<Node*>();
-//    }
-//    Node(int _val, std::vector<Node*> _neighbors) {
-//        val = _val;
-//        neighbors = _neighbors;
-//    }
-//};
-
-class Solution {
+class Node {
 public:
-    int snakesAndLadders(std::vector<std::vector<int>>& board) {
-        std::size_t n = board.size();
-        std::vector<std::pair<int, int>> cells(n * n + 1);
-        std::size_t row = n - 1;
-        std::vector<int> column(n);
-        for (std::size_t i = 0; i < n; ++i) {
-            column[i] = static_cast<int>(i);
-        }
-        std::size_t ind = 1;
-        for (std::size_t i = 0; i < n; ++i) {
-            for (const int& col : column) {
-                cells[ind++] = std::make_pair(row, col);
-            }
-            --row;
-            std::reverse(column.begin(), column.end());
-        }
-        
-        std::queue<std::size_t> queue;
-        std::vector<int> steps(n * n + 1, -1);
-        steps[1] = 0;
-        queue.push(1);
-        while (!queue.empty()) {
-            std::size_t curr = queue.front();
-            queue.pop();
-            std::size_t end = n * n > curr + 6 ? curr + 6 : n * n;
-            for (std::size_t i = curr + 1; i <= end; ++i) {
-                auto [row, col] = cells[i];
-                std::size_t dest = board[row][col] == -1 ? i : board[row][col];
-                if (steps[dest] == -1) {
-                    steps[dest] = steps[curr] + 1;
-                    queue.push(dest);
-                }
-            }
-        }
-        
-        return steps[n * n];
+    int val;
+    std::vector<Node*> neighbors;
+    Node() {
+        val = 0;
+        neighbors = std::vector<Node*>();
+    }
+    Node(int _val) {
+        val = _val;
+        neighbors = std::vector<Node*>();
+    }
+    Node(int _val, std::vector<Node*> _neighbors) {
+        val = _val;
+        neighbors = _neighbors;
     }
 };

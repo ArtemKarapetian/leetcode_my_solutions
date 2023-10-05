@@ -1,0 +1,2 @@
+433. Minimum Genetic Mutation:
+    BFS, using queue of strings and checking for every possibility of change in small string of 8 elements.
