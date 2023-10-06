@@ -1,15 +1,15 @@
 #include <iostream>
 #include <vector>
-#include "helper_things.cpp"
-#include "127_word_ladder.cpp"
+//#include "helper_things.cpp"
+#include "211_design_add_and_search_words_data_structure.cpp"
 
 int main() {
-    std::string startGene = "hit";
-    std::string endGene = "cog";
-    std::vector<std::string> bank = {"hot","dot","dog","lot","log","cog"};
-    std::cout << Solution().ladderLength(startGene, endGene, bank) << std::endl;
-    startGene = "hit";
-    endGene = "cog";
-    bank = {"hot","dot","dog","lot","log"};
-    std::cout << Solution().ladderLength(startGene, endGene, bank) << std::endl;
+    WordDictionary wordDictionary = WordDictionary();
+    wordDictionary.addWord("bad");
+    wordDictionary.addWord("dad");
+    wordDictionary.addWord("mad");
+    std::cout << wordDictionary.search("pad"); // return False
+    std::cout << wordDictionary.search("bad"); // return True
+    std::cout << wordDictionary.search(".ad"); // return True
+    std::cout << wordDictionary.search("b.."); // return True
 }
