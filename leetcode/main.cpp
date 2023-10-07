@@ -1,15 +1,28 @@
 #include <iostream>
 #include <vector>
-//#include "helper_things.cpp"
-#include "211_design_add_and_search_words_data_structure.cpp"
+#include "helper_things.cpp"
+#include "212_word_search_ii.cpp"
 
 int main() {
-    WordDictionary wordDictionary = WordDictionary();
-    wordDictionary.addWord("bad");
-    wordDictionary.addWord("dad");
-    wordDictionary.addWord("mad");
-    std::cout << wordDictionary.search("pad"); // return False
-    std::cout << wordDictionary.search("bad"); // return True
-    std::cout << wordDictionary.search(".ad"); // return True
-    std::cout << wordDictionary.search("b.."); // return True
+    std::vector<std::vector<char>> board = {
+        {'o', 'a', 'a', 'n'},
+        {'e', 't', 'a', 'e'},
+        {'i', 'h', 'k', 'r'},
+        {'i', 'f', 'l', 'v'}
+    };
+    std::vector<std::string> words = {"oath","pea","eat","rain"};
+    Helper().PrintVector(Solution().findWords(board, words));
+    board = {
+        {'a', 'b'},
+        {'c', 'd'}
+    };
+    words = {"abcb"};
+    Helper().PrintVector(Solution().findWords(board, words));
+    board = {
+        {'a', 'b', 'c'},
+        {'a', 'e', 'd'},
+        {'a', 'f', 'g'}
+    };
+    words = {"abcdefg","gfedcbaaa","eaabcdgfa","befa","dgc","ade"};
+    Helper().PrintVector(Solution().findWords(board, words));
 }

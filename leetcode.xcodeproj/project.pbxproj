@@ -12,6 +12,7 @@
 		A506AB5C2ACE7FA600836F17 /* 127_word_ladder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506AB5B2ACE7FA600836F17 /* 127_word_ladder.cpp */; };
 		A527871F2ACF0414002F2557 /* 211_design_add_and_search_words_data_structure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A527871E2ACF0414002F2557 /* 211_design_add_and_search_words_data_structure.cpp */; };
 		A5D90B3D2A7DAC260062122B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D90B3C2A7DAC260062122B /* main.cpp */; };
+		A5EE1B7B2AD0C2C800C3D30A /* 212_word_search_ii.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5EE1B7A2AD0C2C800C3D30A /* 212_word_search_ii.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,7 @@
 		A527871E2ACF0414002F2557 /* 211_design_add_and_search_words_data_structure.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 211_design_add_and_search_words_data_structure.cpp; sourceTree = "<group>"; };
 		A5D90B392A7DAC260062122B /* leetcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = leetcode; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D90B3C2A7DAC260062122B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A5EE1B7A2AD0C2C800C3D30A /* 212_word_search_ii.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 212_word_search_ii.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				A506AB592ACE6B5200836F17 /* 433_minimum_genetic_mutation.cpp */,
 				A506AB5B2ACE7FA600836F17 /* 127_word_ladder.cpp */,
 				A527871E2ACF0414002F2557 /* 211_design_add_and_search_words_data_structure.cpp */,
+				A5EE1B7A2AD0C2C800C3D30A /* 212_word_search_ii.cpp */,
 			);
 			path = leetcode;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 				A506AB5C2ACE7FA600836F17 /* 127_word_ladder.cpp in Sources */,
 				A506AB5A2ACE6B5200836F17 /* 433_minimum_genetic_mutation.cpp in Sources */,
 				A506AB572ACE66BF00836F17 /* helper_things.cpp in Sources */,
+				A5EE1B7B2AD0C2C800C3D30A /* 212_word_search_ii.cpp in Sources */,
 				A527871F2ACF0414002F2557 /* 211_design_add_and_search_words_data_structure.cpp in Sources */,
 				A5D90B3D2A7DAC260062122B /* main.cpp in Sources */,
 			);
