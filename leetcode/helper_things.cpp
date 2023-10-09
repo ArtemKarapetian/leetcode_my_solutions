@@ -78,6 +78,15 @@ public:
             std::cout << std::endl;
         }
     }
+    
+    void PrintVectorVectorInt(std::vector<std::vector<int>> vector) {
+        for (const std::vector<int>& i : vector) {
+            for (const int& j : i) {
+                std::cout << j << " ";
+            }
+            std::cout << std::endl;
+        }
+    }
 
     void PrintTree(TreeNode* root) {
         if (!root) {
