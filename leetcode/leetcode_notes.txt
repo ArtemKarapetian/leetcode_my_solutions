@@ -1,3 +1,12 @@
+43      MEDIUM  Multiply strings
+    Multiplication using carry and current integers. Clever idea of using answer size = num1 size + num2 size.
+
+46      WTF Permutations
+    PLS DO IT AGAIN
+
+77      MEDIUM Combinations
+    There is very cool iterative method but recursive one was faster. Just adding numbers in order of magnitude.
+
 127     HARD    Word Ladder
     The same as 127. BFS, using queue and unordered_set.
     Much faster if delete words from the set when they are first found, not when they are iterated.
@@ -8,6 +17,9 @@
 212     HARD    Word Search II
     Using Trie to find word. Don't use hash_tables, only marking/unmarking the board and not storing isWord
     in TrieNode but storing the whole word. If word is pushed to the answer vector, then word is cleared in Node.
+
+415     EASY    Add strings
+    Reversing two inputs and adding a number by number.
 
 433     MEDIUM  Minimum Genetic Mutation:
     BFS, using queue of strings and checking for every possibility of change in small string of 8 elements.

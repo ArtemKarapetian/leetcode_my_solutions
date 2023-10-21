@@ -70,7 +70,7 @@ public:
          std::cout << std::endl;
      }
 
-    void PrintVectorVector(std::vector<std::vector<char>> vector) {
+    void PrintVectorVector(std::vector<std::vector<char> > vector) {
         for (const std::vector<char>& i : vector) {
             for (const char& j : i) {
                 std::cout << j << " ";
@@ -79,7 +79,7 @@ public:
         }
     }
     
-    void PrintVectorVectorInt(std::vector<std::vector<int>> vector) {
+    void PrintVectorVectorInt(std::vector<std::vector<int> > vector) {
         for (const std::vector<int>& i : vector) {
             for (const int& j : i) {
                 std::cout << j << " ";
