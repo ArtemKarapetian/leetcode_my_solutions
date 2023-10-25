@@ -1,10 +1,13 @@
+39      MEDIUM  Combination sum
+    Use simple idea of backtracing.
+
 43      MEDIUM  Multiply strings
     Multiplication using carry and current integers. Clever idea of using answer size = num1 size + num2 size.
 
-46      WTF Permutations
-    PLS DO IT AGAIN
+46      MEDIUM  Permutations
+    Can be solved using backtracking and also using unordered_set.
 
-77      MEDIUM Combinations
+77      MEDIUM  Combinations
     There is very cool iterative method but recursive one was faster. Just adding numbers in order of magnitude.
 
 127     HARD    Word Ladder
