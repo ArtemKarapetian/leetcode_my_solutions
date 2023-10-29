@@ -1,3 +1,6 @@
+22      MEDIUM  Generate parentheses
+    Recursive call to close and to open paranthese.
+
 39      MEDIUM  Combination sum
     Use simple idea of backtracing.
 
@@ -7,8 +10,14 @@
 46      MEDIUM  Permutations
     Can be solved using backtracking and also using unordered_set.
 
+52      HARD    N-Queens II
+    Needed to check solutions + write it on paper. Going column- and row-wise using some smart way + check for diagonals.
+
 77      MEDIUM  Combinations
     There is very cool iterative method but recursive one was faster. Just adding numbers in order of magnitude.
+
+79      MEDIUM  Word search
+    DFS and renaming board characters with '*' in order to use less memory to store already used symbols.
 
 127     HARD    Word Ladder
     The same as 127. BFS, using queue and unordered_set.

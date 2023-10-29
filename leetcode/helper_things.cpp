@@ -54,35 +54,21 @@ struct ListNode {
 
 };
 
+template <typename T>
 class Helper {
 public:
-     void PrintVector(std::vector<std::string> vector) {
-         for (const std::string& i : vector) {
-             std::cout << i << std::endl;
-         }
-         std::cout << std::endl;
-     }
      
-     void PrintIntVector(std::vector<int> vector) {
-         for (const int& i : vector) {
-             std::cout << i << " ";
-         }
-         std::cout << std::endl;
-     }
-
-    void PrintVectorVector(std::vector<std::vector<char> > vector) {
-        for (const std::vector<char>& i : vector) {
-            for (const char& j : i) {
-                std::cout << j << " ";
-            }
-            std::cout << std::endl;
+    void PrintVector(const std::vector<T> vector) {
+        for (const T& i : vector) {
+            std::cout << i << " ";
         }
+        std::cout << std::endl;
     }
-    
-    void PrintVectorVectorInt(std::vector<std::vector<int> > vector) {
-        for (const std::vector<int>& i : vector) {
-            for (const int& j : i) {
-                std::cout << j << " ";
+
+    void PrintVectorVector(const std::vector<std::vector<T> > big_vector) {
+        for (const std::vector<T>& vector : big_vector) {
+            for (const T& element : vector) {
+                std::cout << element << " ";
             }
             std::cout << std::endl;
         }
