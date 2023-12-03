@@ -1,6 +1,10 @@
 22      MEDIUM  Generate parentheses
     Recursive call to close and to open paranthese.
 
+32      HARD    Longest valid parentheses
+    Used stack for saving the indes of last element which has no open parentheses
+    or is closing parenthese while where are no open parenthese before it
+
 39      MEDIUM  Combination sum
     Use simple idea of backtracing.
 
@@ -13,15 +17,24 @@
 52      HARD    N-Queens II
     Needed to check solutions + write it on paper. Going column- and row-wise using some smart way + check for diagonals.
 
+66      EASY    Plus one
+    Adding 1 to array of long integer while the radix are equal to 9
+
 77      MEDIUM  Combinations
     There is very cool iterative method but recursive one was faster. Just adding numbers in order of magnitude.
 
 79      MEDIUM  Word search
     DFS and renaming board characters with '*' in order to use less memory to store already used symbols.
 
+108     EASY    Convert sorted array to binary search tree
+    Not quite easy, but uses divide and conquer method.
+
 127     HARD    Word Ladder
     The same as 127. BFS, using queue and unordered_set.
     Much faster if delete words from the set when they are first found, not when they are iterated.
+
+148     MEDIUM  Sort list
+    The idea is merge sort where you divide the listnode chain into two by making null (nil in go) in middle.
 
 211     MEDIUM  Design Add and Search Words Data Structure
     Wrote simple Trie with Node and made search with BFS. Recursive methods tend to be faster although.
@@ -29,6 +42,9 @@
 212     HARD    Word Search II
     Using Trie to find word. Don't use hash_tables, only marking/unmarking the board and not storing isWord
     in TrieNode but storing the whole word. If word is pushed to the answer vector, then word is cleared in Node.
+
+409     EASY    Longest palindrome
+    Count all letters and get maximum palindrome
 
 415     EASY    Add strings
     Reversing two inputs and adding a number by number.
