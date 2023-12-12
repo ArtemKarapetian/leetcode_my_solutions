@@ -1,10 +1,5 @@
 package main
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
 func mergeList(left, right *ListNode) *ListNode {
 	new_head := &ListNode{}
 	node := new_head

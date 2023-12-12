@@ -1,6 +1,9 @@
 22      MEDIUM  Generate parentheses
     Recursive call to close and to open paranthese.
 
+23      HARD    Merge K lists
+    Merge k lists by merging every two in recursion cycle.
+    
 32      HARD    Longest valid parentheses
     Used stack for saving the indes of last element which has no open parentheses
     or is closing parenthese while where are no open parenthese before it
@@ -48,6 +51,9 @@
 
 415     EASY    Add strings
     Reversing two inputs and adding a number by number.
+
+427     MEDIUM  Construct quad tree
+    That was a hard one using recursive calling.
 
 433     MEDIUM  Minimum Genetic Mutation:
     BFS, using queue of strings and checking for every possibility of change in small string of 8 elements.
