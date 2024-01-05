@@ -1,0 +1,23 @@
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	var num int
+// 	fmt.Scanln(&num)
+// 	for i := 0; i < num; i++ {
+// 		var t int
+// 		fmt.Scanln(&t)
+// 		var numberEdges int = 2 * t - 2
+// 		var temp int
+// 		for j := 0; j < t; j++ {
+// 			fmt.Scan(&temp)
+// 			numberEdges -= temp
+// 		}
+// 		if numberEdges > 0 {
+// 			fmt.Println("NO")
+// 		} else {
+// 			fmt.Println("YES")
+// 		}
+// 	}
+// }

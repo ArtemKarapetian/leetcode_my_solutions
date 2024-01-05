@@ -5,6 +5,7 @@
         "type": "go",
         "request": "launch",
         "mode": "auto",
+        "console": "integratedTerminal",
         "program": "/Users/nelly/Desktop/xcode projects/leetcode/go_leetcode"
     },
         {
@@ -16,7 +17,7 @@
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
-            "externalConsole": false,
+            "externalConsole": true,
             "MIMode": "lldb",
             "preLaunchTask": "C/C++: clang++ сборка активного файла"
         }

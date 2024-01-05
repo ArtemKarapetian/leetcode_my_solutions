@@ -1,0 +1,60 @@
+package main
+
+import "fmt"
+
+func proccessQuery(a, plusQuery []int, op string) {
+	switch op {
+	case "+":
+		var l, r, x int
+		fmt.Scan(&l, &r, &x)
+		plusQuery[l-1] += x
+		if r != len(a) {
+			plusQuery[r] -= x
+		}
+	case "?":
+		var l, r, k, b int
+		fmt.Scan(&l, &r, &k, &b)
+		addToA(a, plusQuery)
+		printQuery(a, l, r, k, b)
+	}
+}
+
+func addToA(a, plusQuery []int) {
+	var current int
+	for i := 0; i < len(a); i++ {
+		current += plusQuery[i]
+		plusQuery[i] = 0
+		a[i] += current
+	}
+}
+
+func printQuery(a []int, l, r, k, b int) {
+	var maximum int = a[l-1]
+	for i := l - 1; i < r; i++ {
+		minimum := a[i]
+		if a[i] > k*i+k+b {
+			minimum = k*i + k + b
+		}
+		if minimum > maximum {
+			maximum = minimum
+		}
+	}
+	fmt.Println(maximum)
+}
+
+func main() {
+	var n, q int
+	fmt.Scan(&n, &q)
+
+	a := make([]int, n)
+	for i := 0; i < n; i++ {
+		fmt.Scan(&a[i])
+	}
+
+	var op string
+	plusQuery := make([]int, len(a))
+	for i := 0; i < q; i++ {
+		fmt.Scan(&op)
+		proccessQuery(a, plusQuery, op)
+	}
+}

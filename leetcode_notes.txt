@@ -1,3 +1,7 @@
+4       HARD    Median of Two Sorted Arrays
+    The point is to divide two arrays in two parts each and to compare the mid element
+    in this parts. Better read editorial...
+
 22      MEDIUM  Generate parentheses
     Recursive call to close and to open paranthese.
 
@@ -7,6 +11,15 @@
 32      HARD    Longest valid parentheses
     Used stack for saving the indes of last element which has no open parentheses
     or is closing parenthese while where are no open parenthese before it
+
+33      MEDIUM  Search in Rotated Sorted array
+    Some bin. search with additions
+
+34      MEDIUM  Find First and Last Position of Elements in Sorted Array
+    Using bin. search 3 times with different conditions but nothing else.
+
+35      EASY    Search Insert Position
+    Bin. search
 
 39      MEDIUM  Combination sum
     Use simple idea of backtracing.
@@ -20,8 +33,14 @@
 52      HARD    N-Queens II
     Needed to check solutions + write it on paper. Going column- and row-wise using some smart way + check for diagonals.
 
+53      MEDIUM  Maximum Subarray
+    Kadane algorithm (I don't know what is the Kadane algorithm but the idea is pretty simple)
+
 66      EASY    Plus one
     Adding 1 to array of long integer while the radix are equal to 9
+
+74      MEDIUM  Search A 2D Matrix
+    Just consider that a 2D matrix is an array and use bin. search.
 
 77      MEDIUM  Combinations
     There is very cool iterative method but recursive one was faster. Just adding numbers in order of magnitude.
@@ -39,12 +58,18 @@
 148     MEDIUM  Sort list
     The idea is merge sort where you divide the listnode chain into two by making null (nil in go) in middle.
 
+153     MEDIUM  Find Minimum in Rotated Sorted array
+    It's a little bit harder but requires to write all conditions one time and there would be a clear way to shorten all this.
+
 211     MEDIUM  Design Add and Search Words Data Structure
     Wrote simple Trie with Node and made search with BFS. Recursive methods tend to be faster although.
 
 212     HARD    Word Search II
     Using Trie to find word. Don't use hash_tables, only marking/unmarking the board and not storing isWord
     in TrieNode but storing the whole word. If word is pushed to the answer vector, then word is cleared in Node.
+
+215     MEDIUM  Find K Pairs with Smallest Sums
+    The idea is using heap and adding k pairs with nums2[0] and then adding pair with nums2[i + 1] after adding pair to result.
 
 409     EASY    Longest palindrome
     Count all letters and get maximum palindrome
@@ -57,3 +82,10 @@
 
 433     MEDIUM  Minimum Genetic Mutation:
     BFS, using queue of strings and checking for every possibility of change in small string of 8 elements.
+
+502     HARD    IPO
+    It is hard problem but it just implies sorting and then using heap. Nothing cool.
+
+918     MEDIUM  Maximum Sum Circular Subarray
+    That was the tough one. So, the point is to find minimum and maximum subarray sums (using Kadane) and return something you need.
+    I mean (total sum - min) or max.

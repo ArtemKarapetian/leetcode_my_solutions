@@ -1,0 +1,80 @@
+package main
+
+import "fmt"
+
+type TreeNode struct {
+	Nodes []*TreeNode
+	Companies map[string]struct{}
+	Cost int
+}
+
+func main() {
+	var n, k int
+	fmt.Scanln(&n, &k)
+	
+	var company string
+	for i := 0; i < k; i++ {
+		fmt.Scanln(&company)
+	}
+
+	nodes := make([]TreeNode, n)
+	for i := 0; i < n; i++ {
+		nodes[i] = TreeNode{}
+		nodes[i].Nodes = []*TreeNode{}
+	}
+
+	var root *TreeNode
+	for i := 0; i < n; i++ {
+		var parent, cost int
+		fmt.Scanln(&parent, &cost, &company)
+		nodes[i].Companies = make(map[string]struct{})
+		nodes[i].Companies[company] = struct{}{}
+		nodes[i].Cost = cost
+		if parent != 0 {
+			nodes[parent - 1].Nodes = append(nodes[parent-1].Nodes, &nodes[i])
+		} else {
+			root = &nodes[i]
+		}
+	}
+
+	dfs(root)
+
+	if (len(root.Companies) != k) {
+		fmt.Println(-1)
+	} else {
+		fmt.Println(findCheapest(root, k, root.Cost))
+	}
+}
+
+func dfs(root *TreeNode) {
+	if len(root.Nodes) == 0 {
+		return
+	}
+
+	for _, node := range root.Nodes {
+		dfs(node)
+		root.Cost += node.Cost
+		for company := range node.Companies {
+			root.Companies[company] = struct{}{}
+		}
+	}
+}
+
+func findCheapest(root *TreeNode, k, min int) int {
+	if len(root.Companies) != k {
+		return min
+	}
+
+	if root.Cost < min {
+		min = root.Cost
+	}
+
+	for _, node := range root.Nodes {
+		current := findCheapest(node, k, min)
+		if current < min {
+			min = current
+		}
+	}
+	return min
+}
+

@@ -1,13 +1,13 @@
 package main
 
-func construct(grid [][]int) *Node {
+func construct(grid [][]int) *QuadNode {
 	return constructNode(&grid, 0, 0, len(grid))
 }
 
-func constructNode(grid *[][]int, firstX, firstY, n int) *Node{
+func constructNode(grid *[][]int, firstX, firstY, n int) *QuadNode{
 	var firstElement int = (*grid)[firstY][firstX]
 	if n == 1 {
-		return &Node{firstElement == 1, true, nil, nil, nil, nil}
+		return &QuadNode{firstElement == 1, true, nil, nil, nil, nil}
 	}
 	var flag bool = true
 	for i := firstX; i < firstX + n; i++ {
@@ -19,9 +19,9 @@ func constructNode(grid *[][]int, firstX, firstY, n int) *Node{
 		}
 	}
 	if flag {
-		return &Node{firstElement == 1, true, nil, nil, nil, nil}
+		return &QuadNode{firstElement == 1, true, nil, nil, nil, nil}
 	}
-	return &Node{
+	return &QuadNode{
 		true, 
 		false, 
 		constructNode(grid, firstX, firstY, n / 2),

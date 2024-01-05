@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func main() {
+	var n, m, minimum int
+	fmt.Scanln(&n, &m)
+	minimum = m
+	for i := 0; i < n; i++ {
+		var gift int
+		fmt.Scan(&gift)
+		if minimum > gift {
+			minimum = gift
+		}
+		if m >= gift {
+			m -= gift
+		}
+		if (minimum - 1 > m) {
+			m = minimum - 1
+		}
+	}
+	fmt.Println(m)
+}
